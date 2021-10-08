@@ -13,3 +13,6 @@ execute as @e[tag=maze_flood_active] if score @s maze_z < @e[tag=maze_se,limit=1
 
 scoreboard players set @e[tag=maze_flood_active] maze_id 0
 tag @e[tag=maze_flood_active] remove maze_flood_active
+
+scoreboard players remove MazeVars maze_speed 1
+execute if score MazeVars maze_speed matches 1.. run function mazegen:flood_entities

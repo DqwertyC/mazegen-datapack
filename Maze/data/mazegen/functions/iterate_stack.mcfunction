@@ -21,3 +21,6 @@ tag @e[tag=maze_stack_active] add maze_visited
 tag @e remove maze_stack_active
 tag @e remove maze_stack_next
 tag @e remove maze_stack_last
+
+scoreboard players remove MazeVars maze_speed 1
+execute if score MazeVars maze_speed matches 1.. run function mazegen:iterate_stack
