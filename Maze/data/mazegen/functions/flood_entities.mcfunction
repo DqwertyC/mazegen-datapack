@@ -17,4 +17,4 @@ tag @e[tag=maze_flood_active] remove maze_flood_active
 
 # Recurse if speed is set
 scoreboard players remove MazeVars maze_speed 1
-execute if score MazeVars maze_speed matches 1.. run function mazegen:flood_entities
+execute if entity @e[tag=maze_flood_new] if score MazeVars maze_speed matches 1.. run function mazegen:flood_entities
