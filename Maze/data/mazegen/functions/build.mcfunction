@@ -1,3 +1,3 @@
 function mazegen:start_flood
-data remove storage maze running
+data modify storage maze building set value 1b
 data modify storage maze flooding set value 1b
