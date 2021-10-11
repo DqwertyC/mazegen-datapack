@@ -3,7 +3,7 @@ tag @e[tag=maze_flood_new,sort=arbitrary,limit=128] add maze_flood_active
 tag @e[tag=maze_flood_active] remove maze_flood_new
 
 execute as @e[tag=maze_flood_active] at @s run fill ~-1 ~ ~-1 ~1 ~ ~1 air
-execute as @e[tag=maze_flood_active] at @s run setblock ~ ~ ~ red_concrete
+execute if data storage maze running as @e[tag=maze_flood_active] at @s run setblock ~ ~ ~ red_concrete
 
 # Spread out in all four directions, avoiding duplicates
 execute as @e[tag=maze_flood_active] at @s if block ~01 ~-1 ~00 minecraft:light_gray_concrete if block ~02 ~-1 ~00 minecraft:light_gray_concrete positioned ~02 ~00 ~00 unless entity @e[tag=maze_marker,distance=0...1] run summon minecraft:marker ~ ~ ~ {Tags:["maze_flood_new","maze_marker"]}
