@@ -1,0 +1,6 @@
+#Items made with https://mcstacker.net/
+item replace entity @s hotbar.0 with chicken_spawn_egg{display:{Name:'{"text":"Pattern Starter","color":"green","bold":true,"italic":false}'},EntityTag:{id:"minecraft:armor_stand",CustomNameVisible:1b,Invisible:1b,Small:1b,Tags:["pattern_seed"],ArmorItems:[{},{},{},{id:"minecraft:chiseled_stone_bricks",Count:1b}],CustomName:'{"text":"Pattern Seed"}'}} 1
+
+item replace entity @s hotbar.7 with lingering_potion{display:{Name:'{"text":"Generate Pattern","color":"aqua","bold":true,"italic":false}'},PatternCreate:1b,Potion:"minecraft:empty",CustomPotionColor:56310} 1
+#item replace entity @s hotbar.7 with lingering_potion{display:{Name:'{"text":"Build Structures","color":"dark_purple","bold":true,"italic":false}'},stitchBuild:1b,Potion:"minecraft:empty",CustomPotionColor:13631734} 1
+item replace entity @s hotbar.8 with lingering_potion{display:{Name:'{"text":"Clear Pattern","color":"gold","bold":true,"italic":false}'},PatternReset:1b,Potion:"minecraft:empty",CustomPotionColor:16154368} 1
