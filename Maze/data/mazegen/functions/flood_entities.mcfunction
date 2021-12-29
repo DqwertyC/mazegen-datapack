@@ -2,12 +2,13 @@
 tag @e[tag=maze_flood_new,sort=arbitrary,limit=128] add maze_flood_active
 tag @e[tag=maze_flood_active] remove maze_flood_new
 
-execute unless data storage maze building as @e[tag=maze_flood_active] at @s run fill ~-1 ~ ~-1 ~1 ~9 ~1 air replace
+execute unless data storage maze building as @e[tag=maze_flood_active] at @s run fill ~-1 ~ ~-1 ~1 ~9 ~1 light[level=15] replace
 execute unless data storage maze building if data storage maze running as @e[tag=maze_flood_active] at @s run fill ~-1 ~ ~-1 ~1 ~ ~1 black_concrete
 execute unless data storage maze building if data storage maze running as @e[tag=maze_flood_active] at @s run setblock ~ ~ ~ red_concrete
 
 execute if data storage maze building as @e[tag=maze_flood_active] at @s run fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:structure_block[mode=load]{ignoreEntities:1b,integrity:1.0f,mode:"LOAD",name:"mazegen:maze_wall",posX:0,posY:0,posZ:0,sizeX:1,sizeY:10,sizeZ:1} replace black_concrete
 execute if data storage maze building as @e[tag=maze_flood_active] at @s run fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:structure_block[mode=load]{ignoreEntities:1b,integrity:1.0f,mode:"LOAD",name:"mazegen:maze_path",posX:0,posY:0,posZ:0,sizeX:1,sizeY:10,sizeZ:1} replace lime_concrete
+execute if data storage maze building as @e[tag=maze_flood_active] at @s run fill ~-1 ~1 ~-1 ~1 ~1 ~1 redstone_block replace light
 execute if data storage maze building as @e[tag=maze_flood_active] at @s run fill ~-1 ~1 ~-1 ~1 ~1 ~1 redstone_block replace air
 
 # Spread out in all four directions, avoiding duplicates

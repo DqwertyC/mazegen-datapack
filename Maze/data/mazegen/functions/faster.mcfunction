@@ -1,0 +1,1 @@
+execute if score MazeConst maze_speed < MaxSpeed maze_speed run scoreboard players operation MazeConst maze_speed *= DelSpeed maze_speed
